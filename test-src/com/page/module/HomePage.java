@@ -26,6 +26,12 @@ public class HomePage extends CommonFunctionalities implements HomePageLocator {
 		action.sendKeys(Keys.ESCAPE);
 		Thread.sleep(1000);
 		action.sendKeys(Keys.TAB);
+		Thread.sleep(1000);
+		safeClick(First_Search, LONGWAIT);
+	}
+
+	public void ClickFirst() throws InterruptedException {
+		Thread.sleep(1000);
 		safeClick(Searc_Button, LONGWAIT);
 	}
 }

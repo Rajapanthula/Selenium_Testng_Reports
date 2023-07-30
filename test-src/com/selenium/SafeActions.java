@@ -56,7 +56,6 @@ public class SafeActions extends Sync {
 		try {
 			waitTime = getWaitTime(optionWaitTime);
 			if (waitUntilClickable(locator, waitTime)) {
-				scrollIntoElementView(locator);
 				WebElement element = driver.findElement(locator);
 				setHighlight(element);
 				element.click();
