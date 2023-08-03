@@ -15,6 +15,9 @@ import com.page.module.FaceBook;
 import com.page.module.Gmail;
 import com.page.module.HomePage;
 import com.page.module.LoginPage;
+import com.page.module.Persistant;
+import com.page.module.TechM;
+import com.page.module.Wipro;
 import com.page.module.flipkart;
 
 public class TestOne extends BaseSetup {
@@ -23,6 +26,9 @@ public class TestOne extends BaseSetup {
 	FaceBook facebook;
 	flipkart flipkart;
 	Gmail gmail;
+	TechM techM;
+	Wipro wipro;
+	Persistant persis;
 	ExcelManagerFillo ExcelManagerFillo = new ExcelManagerFillo("Data\\DataSheet.xlsx");
 
 	@Test(dataProvider = "UserAccess")
@@ -32,6 +38,9 @@ public class TestOne extends BaseSetup {
 		HomePage = new HomePage(getDriver());
 		facebook = new FaceBook(getDriver());
 		flipkart = new flipkart(getDriver());
+		techM = new TechM(getDriver());
+		wipro = new Wipro(getDriver());
+		persis = new Persistant(getDriver());
 		gmail = new Gmail(getDriver());
 
 		HomePage.NavigateToURL("https://google.com");
@@ -49,6 +58,16 @@ public class TestOne extends BaseSetup {
 		if (name.equals("facebook")) {
 			facebook.EnterCredentials(username, password);
 			facebook.LoginToFB();
+		}
+		if (name.equals("persistent systems")) {
+			persis.EnterCredentials(username, password);
+		}
+		if (name.equals("tech mahindra")) {
+			techM.EnterCredentials(username, password);
+		}
+		if (name.equals("wipro")) {
+			wipro.EnterCredentials(username, password);
+			wipro.LoginToFB();
 		}
 	}
 

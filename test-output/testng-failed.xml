@@ -10,7 +10,7 @@
     <classes>
       <class name="com.testsuite.TestOne">
         <methods>
-          <include name="UserAccessCreation" invocation-numbers="0"/>
+          <include name="UserAccessCreation" invocation-numbers="0 3 4 5"/>
           <include name="getResult"/>
           <include name="initializeBaseSetup"/>
           <include name="beforeSuite"/>
