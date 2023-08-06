@@ -29,5 +29,25 @@ public class Gmail extends CommonFunctionalities implements GmailLocator {
 	public void EnterCredentials(String username, String password) {
 		safeType(Username, username, LONGWAIT);
 		safeClick(Next, LONGWAIT);
+		safeType(Password, password, LONGWAIT);
+		safeClick(Next, LONGWAIT);
+	}
+
+	public void clickInbox() {
+		safeClick(Inbox, LONGWAIT);
+	}
+
+	public void clickSent() {
+		safeClick(Sent, LONGWAIT);
+	}
+
+	public void clickCompse() {
+		safeClick(Compose, LONGWAIT);
+		safeClick(ComposeClose, LONGWAIT);
+	}
+
+	public void Logout() {
+		safeClick(SignOutImage, LONGWAIT);
+		safeClick(Signout, LONGWAIT);
 	}
 }

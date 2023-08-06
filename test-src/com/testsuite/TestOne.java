@@ -54,10 +54,18 @@ public class TestOne extends BaseSetup {
 		if (name.equals("gmail")) {
 			gmail.clickonSignin();
 			gmail.EnterCredentials(username, password);
+			gmail.clickInbox();
+			gmail.clickSent();
+			gmail.clickCompse();
+			gmail.Logout();
+			
 		}
 		if (name.equals("facebook")) {
 			facebook.EnterCredentials(username, password);
 			facebook.LoginToFB();
+			facebook.Search("Persistant");
+			facebook.Home();
+			facebook.LogoutToFB();
 		}
 		if (name.equals("persistent systems")) {
 			persis.EnterCredentials(username, password);

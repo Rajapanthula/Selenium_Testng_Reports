@@ -25,6 +25,10 @@ public class flipkart extends CommonFunctionalities implements FlipkartLocator {
 	public void EnterCredentials(String username, String password) {
 		if (isElementPresent(Username))
 			safeType(Username, username, LONGWAIT);
+		else
+			safeClick(Login, LONGWAIT);
+		
+		safeType(Username, username, LONGWAIT);
 	}
 
 	public void close() {

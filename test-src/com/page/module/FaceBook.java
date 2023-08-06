@@ -29,4 +29,22 @@ public class FaceBook extends CommonFunctionalities implements FaceBookLocator {
 	public void LoginToFB() {
 		safeClick(LoginFB, LONGWAIT);
 	}
+
+	public void Home() {
+		safeClick(Home, LONGWAIT);
+	}
+
+	public void LogoutToFB() {
+		safeClick(SignOutImage, LONGWAIT);
+		safeClick(LogOut, LONGWAIT);
+
+	}
+
+	public void Search(String value) {
+		safeType(Search, value, LONGWAIT);
+		safeClick(FirstSearch, LONGWAIT);
+		safeClick(ClickONPersis, LONGWAIT);
+
+	}
+
 }
